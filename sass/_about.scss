@@ -1,0 +1,113 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+#about {
+    height: 100%;
+    color: #000;
+    display: flex;
+    align-items: center;
+
+    .container {
+        padding: 70px 5%;
+
+        .section-head p{
+            margin:  30px 0px;
+        }
+
+        .informations {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin: 0%;
+            .info,
+            .skill {
+              width: 80%;
+            }
+
+            .info .detail .detail-item {
+                margin: 25px 0px;
+                i {
+                    margin-right: 15px;
+                    color: $primary-color;
+                }
+            }
+
+            .skill {
+                .skills-container {
+                    width: 100%; 
+                    background-color: #ddd; 
+                    height: 5px;
+                    position: relative;
+                    margin-top: 3px;
+                    margin-bottom: 15px;
+                  }
+            
+                  .skills {
+                    background-color: $primary-color;
+                    height: 5px;
+                    position: absolute;
+                    left: 0;
+                    text-align: right;
+            
+                     p {
+                        margin-top: 8px;
+                    }
+                  }
+
+                  /*   ==skill animation == */
+
+                  [data-aos="html-animation"] {
+                     width: 0%;
+
+                  &.aos-animate {
+                    width: 75%;
+                  }
+                     
+                  }
+
+                  [data-aos="css-animation"] {
+                     width: 0%;
+                
+                 &.aos-animate {
+                    width: 90%;
+                 }
+                    
+                  }
+
+                 [data-aos="js-animation"] {
+                     width: 0%;
+
+                 &.aos-animate {
+                    width: 80%;
+                 }
+                     
+                  }
+
+                 [data-aos="php-animation"] {
+                     width: 0%;
+                 
+                 &.aos-animate {
+                    width: 90%;
+                 }
+                     
+                  }
+             } 
+        }
+    }
+}
+
+/* Media querie */ 
+
+@include tablet-desktop() {
+    #about {
+        padding-top: 50px;
+         .container .informations {
+           flex-direction: row;
+           .info,
+           .skill {
+       width: 50%;
+      }
+     }
+    }
+
+   }

@@ -1,0 +1,127 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+
+  #portfolio {
+    height: 100%;
+
+    .container {
+      padding: 70px 5%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+  
+  }
+
+  .portfolio-head h2 {
+      font-size: 25px;     
+  }
+
+  #skills-menu {
+      display: flex;
+      justify-content: space-between;
+      color: gray;
+      margin-top: 30px;
+      margin-bottom: 15px;
+
+      .skills-menu-item {
+          cursor: pointer;
+      }
+
+      ul {
+          @include flex-center();
+
+          li:first-child {
+              background-color: $primary-color;
+              border-radius: 5px;
+              padding: 3PX 5px;
+              border: 1.5px solid $primary-color;
+              color: white;
+              
+          }
+
+          li {
+              list-style: none;
+              margin: 10px;
+              cursor: pointer;
+              font-size: 15px;
+              background-color: white;
+              border-radius: 5px;
+              padding: 3PX 5px;
+              border: 1.5px solid $primary-color;
+              color: $primary-color;
+          }
+          
+      }
+  }
+
+  .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+  }
+
+  .project1 {
+      background: url(/Images/portfolio-screen.webp);
+  }
+  
+  .project2 {
+      background: url(/Images/portfolio-onepage.webp);
+  }
+  .project3 {
+      background: url(/Images/p4d-sreen.webp);
+  }
+  .project4 {
+      background: url(/Images/portfolio-onepage.webp);
+  }
+
+  .project1:hover,
+  .project2:hover,
+  .project3:hover,
+  .project4:hover {
+     background-position: bottom;
+     transition: all 4000ms;
+  }
+
+  .project-box {
+      width: 200px;
+      height:300px;
+      margin: 20px;
+      box-shadow: 2px 2px 2px -2px rgba(0,0,0,.5);  
+      background-size: cover;
+  }
+  .Wordpress,
+  .landingpage {
+  display: none;
+}
+  .more-projects {
+      list-style: none;
+      margin: 10px;
+      background-color: white;
+      border-radius: 5px;
+      padding: 3PX 5px;
+      border: 1.5px solid $primary-color;
+      color: $primary-color;
+      cursor: pointer;
+      margin-top: 40px;
+      width: 150px;
+
+      i {
+          font-size: 20px;
+          margin-left: 3px;
+      }
+  }
+  
+  .more-projects:hover {
+      color: white;
+      background-color: $primary-color;
+  }
+}
+
+/* Media querie */ 
+
+@include tablet-desktop() {
+  #portfolio .portfolio-head h2 {
+      font-size: 45px;     
+  }
+}

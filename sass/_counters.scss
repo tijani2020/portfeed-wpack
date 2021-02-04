@@ -1,0 +1,73 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+
+/* source https://codepen.io/bradtraversy/pen/poJwqOK */
+
+#counters {
+    
+    height: 650px;
+    padding: 25px 5%;
+    background: url(../Images/bg-counters.webp); 
+    text-align: center;
+    @include bg-cover-center();
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        color: white;
+       flex-direction: column;
+       height: 100%;
+
+       #counter-item {
+        width: 85%;
+        margin-bottom: 10px;
+    }
+
+    i {
+        color: white;
+        margin-bottom: 5px;
+        font-size: 35px;
+    
+    }
+
+    .counter {
+        font-size: 30px;
+        margin: 10px ;
+    }
+    
+    }
+}
+
+
+/* Media querie */ 
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    #counters {
+        height: 450px;
+        .container {
+            flex-direction: row;
+            flex-wrap: wrap;
+            .counter-item {
+                width: 45%;
+                font-size: 15px;
+            }
+         }
+    }
+}
+
+@include desktop() {
+    #counters {
+        height: 350px;
+        .container {
+            flex-direction: row;
+            .counter-item {
+                width: 20%;
+                font-size: 20px;
+            }
+            
+         }
+    }
+
+}

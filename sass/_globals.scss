@@ -1,0 +1,36 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+* {
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+}
+
+html,
+body {
+    margin: 0rem;
+    padding: 0rem;
+    position: relative;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.underlign {
+    height: 3px;
+    background-color: $primary-color;
+    width: 80px;
+    margin: 10px auto;
+    
+}
+
+.section-head {
+    text-align: center;
+    font-size: 25px;
+}
+
+.section-head h2 {
+    font-size: 45px;
+    color: $primary-color;
+}

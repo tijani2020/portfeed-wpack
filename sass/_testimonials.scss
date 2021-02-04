@@ -1,0 +1,75 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+
+
+#testimonials {
+    height: 100vh;
+    background-color: $section-color;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 70px;
+
+    .swiper-container {
+      width: 85%;
+      height: 70%;
+      margin-top: 50px;
+
+      .swiper-slide{
+          text-align: center;
+
+          p i {
+              font-size: 30px;
+              color: #7b1fed;
+              margin: 0px 20px;
+                }
+
+                h3 {
+                  margin: 20px auto;
+              }
+        }
+
+        .pic1 {
+          background: url(/Images/test1.webp);
+           @include bg-cover-center();
+           height: 150px;
+           width: 150px;
+           padding: 3.5px;
+           border: 1.5px solid $primary-color;
+           border-radius: 300px;
+           margin: auto;
+       }
+     
+       .pic2 {
+          background: url(/Images/test1.webp);
+          @include bg-cover-center();
+           height: 150px;
+           width: 150px;
+           padding: 3.5px;
+           border: 1.5px solid $primary-color;
+           border-radius: 300px;
+           margin: auto;
+       }
+     
+       .pic3 {
+          background: url(/Images/test3.webp);
+          @include bg-cover-center();
+           height: 150px;
+           width: 150px;
+           padding: 3.5px;
+           border: 1.5px solid $primary-color;
+           border-radius: 300px;
+           margin: auto;
+       }
+
+       .swiper-pagination-bullets{
+          margin-top: 20px;
+         
+      }
+      .swiper-pagination-bullet-active {
+          background-color: #7b1fed !important;
+      }
+    }
+
+}
